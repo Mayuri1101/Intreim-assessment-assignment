@@ -1,0 +1,159 @@
+CONDITIONAL OPERATOR
+
+1) conditional operators
+
+package individual;
+
+public class ConditionalOperator 
+{  
+public static void main(String args[])   
+{  
+int x=6, y=3, z=9;  
+System.out.println(x>y && x>z || y<z);  
+System.out.println((x<z || y>z) && x<y);  
+}  
+}  
+
+output
+true
+false
+
+2) ternary operator
+
+package individual;
+
+public class TernaryOperator
+{  
+public static void main(String args[])   
+{  
+int x, y;  
+x = 10;  
+y = (x == 1) ? 59: 70;  
+System.out.println("Value of y is: " +  y);  
+y = (x == 10) ? 59: 70;  
+System.out.println("Value of y is: " + y);  
+}  
+}  
+
+output
+Value of y is: 70
+Value of y is: 59
+
+
+BITWISE OPERATOR
+
+1) bitwise And
+
+package individual;
+
+public class bitwiseand   
+{   
+public static void main(String[] args)   
+{   
+int x = 5, y = 4;   
+System.out.println("x & y = " + (x & y));   
+}  
+}  
+
+output
+x & y = 4
+
+2)bitwise exclusive Or
+
+package individual;
+
+public class BitwiseXor  
+{   
+public static void main(String[] args)   
+{   
+int x = 7, y = 6;   
+ 
+System.out.println("x ^ y = " + (x ^ y));   
+}  
+}  
+
+output
+x ^ y = 1
+
+3)bitwise inclisive Or
+
+package individual;
+
+public class BitwiseInclusiveOr 
+{   
+public static void main(String[] args)   
+{   
+int x = 4, y = 7;   
+ 
+System.out.println("x | y = " + (x | y));   
+}  
+}  
+ 
+output
+x | y = 7
+
+4) bitwise Complement
+
+package individual;
+
+public class BitwiseCompliment  
+{   
+public static void main(String[] args)   
+{   
+int x = 5;   
+
+System.out.println("~x = " + (~x));   
+}  
+}
+
+output
+~x = -6
+
+5) Bit shift operators
+
+1) Right Shift Operator
+
+package individual;
+
+public class SignedRightShiftOperator 
+{   
+public static void main(String args[])   
+{   
+int x = 20;   
+System.out.println("x>>2 = " + (x >>2));   
+}  
+}  
+
+output
+x>>2 = 12
+
+2)  Left Shift Operator
+
+package individual;
+public class SignedLeftShiftOperator
+{   
+public static void main(String args[])   
+{   
+int x = 18;   
+System.out.println("x<<1 = " + (x << 1));   
+}  
+}  
+
+output
+x<<1 = 36
+
+6)Unsigned Right Shift Operator
+
+package individual;
+
+public class UnsignedRightShiftOperator  
+{   
+public static void main(String args[])   
+{   
+int x = 18;   
+System.out.println("x>>>2 = " + (x >>>2));   
+}  
+}  
+
+output
+x>>>2 = 4
