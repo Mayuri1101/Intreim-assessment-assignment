@@ -1,0 +1,66 @@
+Write the output of the program.
+
+1) package individual;
+
+public class Trycatch {  
+	  
+    public static void main(String[] args) {  
+        try  
+        {  
+        int arr[]= {1,3,5,7};  
+        System.out.println(arr[10]);   
+        }  
+            
+        catch(ArrayIndexOutOfBoundsException e)  
+        {  
+            System.out.println(e);  
+        }  
+        System.out.println("rest of the code");  
+    }  
+      
+}
+
+output
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 4
+rest of the code
+
+2)package individual;
+
+	public class Nestedtryblock{    
+	 public static void main(String args[]){   
+	  try{    
+	    try{    
+	     System.out.println("going to divide by 0");    
+	     int b =39/0;    
+	   }  
+	    catch(ArithmeticException e)  
+	    {  
+	      System.out.println(e);  
+	    }    
+	    try{    
+	    int a[]=new int[5];    
+	     a[5]=4;    
+	     }  
+	    catch(ArrayIndexOutOfBoundsException e)  
+	    {  
+	       System.out.println(e);  
+	    }    
+	  
+	      
+	    System.out.println("other statement");    
+	  }  
+	  catch(Exception e)  
+	  {  
+	    System.out.println("handled the exception (outer catch)");  
+	  }    
+	    
+	  System.out.println("normal flow..");    
+	 }    
+	}  
+
+output
+going to divide by 0
+java.lang.ArithmeticException: / by zero
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+other statement
+normal flow..
