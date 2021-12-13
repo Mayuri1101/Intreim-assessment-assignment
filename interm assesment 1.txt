@@ -1,0 +1,262 @@
+1.public class JunitTestDemo {
+	@Ignore @Test(Excepted=ClassCastException.class)
+	public void testGetLastName() {
+		
+	}
+	@Ignore @Test
+	public void getFirstName() {
+		
+	}
+}
+
+Output:
+
+
+2.The Query to copy all records from dept table and insert the same into department_master table.
+
+Output:
+INSERT INTO department_master (id, name, email) SELECT id, name, email FROM dept;
+
+
+3.public class Test {
+	public static void main(String[] args) throws ArithmeticException {
+		int x = 10;
+		int y =2;
+		try {
+			for(int z=2; z>=0;z--) {
+				int ans = x/z;
+				System.out.println(ans+" ");
+			}
+		}catch(Exception e1){
+			System.out.println("E1");
+		}catch(ArithmeticException e1) {
+			System.out.println("E2");
+		}
+	}
+}
+
+Output:
+5 
+10 
+E1
+
+4.public class Demo {
+	private int num;
+	public Demo(int num) {
+		num = num;
+	}
+	protected int getNum() {
+		return num;
+	}
+	public static void main(String[] args) {
+		Demo obj = new Demo(10);
+		System.out.println(obj.getNum());
+	}
+}
+
+Output:
+0
+
+5.abstract class Rectangle {
+	abstract void addRectangle();
+}
+public class ConsumableRectangle extends Rectangle{
+	public void addRectangle() {
+		System.out.println("Adding Rectangle..");
+	}
+	
+	public static void main(String[] args) {
+		Rectangle rect1 = new ConsumableRectangle();
+		rect1.addRectangle();
+	}
+}
+
+Output:
+Adding Rectangle..
+
+6.public class TestExceptions {
+	public static void main(String[] args) {
+		try {
+			System.out.println("In try Block...");
+			int result = 9/0;
+			System.out.println("Result is:"+result);
+		}
+		catch(Exception e) {
+			System.out.println("In Catch Block..");
+		}
+		finally {
+			System.out.println("In finally Block...");
+		}
+	}
+}
+
+Output:
+In try Block...
+In Catch Block..
+In finally Block...
+
+7.public class Test {
+	public static void main(String[] args) {
+		List<String>list = new ArrayList<>();
+		list.add("Hello");
+		list.add("World");
+		Consumer<List<String>>consumer=Collections::reverse;
+		consumer.accept(list);
+		System.out.println(list);
+	}
+}
+
+Output:
+[World, Hello]
+
+8.public class Test2 {
+	String name;
+	public Test() {
+		name = "Sara";
+	}
+	public static void main(String[] args) {
+		System.out.println(name);
+	}
+}
+
+Output:
+Error in second line-
+non-static field name
+
+9.public class TestException2 {
+	public static void main(String[] args) {
+		String str = null;
+		try {
+			str.equals("Java");
+		}catch(NullPointerException ex) {
+			str = new String("Java");
+			System.out.println(str.equals("Hello"));
+		}
+		System.out.println("Program Continues..");
+	}
+}
+
+Output:
+false
+Program Continues..
+
+10.public class LambdaDemo {
+	public static void main(String[] args) {
+		TreeSet<Integer>((o1,o2)->(o1>o2))?-1:(o1<o2)?-1:0);
+		treeSet.add(850);
+		treeSet.add(235);
+		treeSet.add(1080);
+		treeSet.add(15);
+		treeSet.add(5);
+		System.out.println(treeSet);
+	}
+}
+
+Output:
+compilation problems
+
+11.public class Demo2 {
+	public static void main(String[] args) {
+		Set set = new TreeSet();
+		set.add("2");
+		set.add(3);
+		set.add("1");
+		Iterator it = set.iterator();
+		while(it.hasNext())
+			System.out.println(it.next()+ " ");
+	}
+	public static void main(String[] args) {
+		Demo2.before();
+	}
+}
+
+Output:
+String cannot be cast
+
+12 package individual;
+import java.util.ArrayList;
+
+public class q1 {
+
+	public static void main(String args[])
+	{
+		ArrayList<Integer>arrL=new
+				ArrayList<Integer>();
+		arrL.add(1);
+		arrL.add(2);
+		arrL.add(3);
+		arrL.forEach(n-> System.out.println(n));
+		arrL.forEach(n->{
+			if (n%2==0)
+				System.out.println(n);
+		});
+		
+	}
+}
+
+output
+1
+2
+3
+2
+
+13 package individual;
+
+public class q2 {
+	public static void main(String[] args)
+	{
+		try {
+			if (args.length==0)throw new 
+			Exception();
+		}
+		catch(Exception e)
+		{
+			System.out.print("done");
+			doStuff();//assume this method compiles
+		}
+		finally {
+			System.out.println("finally");
+		}
+	}
+
+	private static void doStuff() {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+output
+donefinally
+
+13 package individual;
+
+public class q3 {
+public static void main(String[] args) {
+	String name =new String("aravind");
+	int position=name.replace('a','*').substring(2,4).indexOf('i');
+			System.out.println(position);
+			
+}
+}
+
+output
+-1
+4)select correct query to find 2nd max salary
+
+output
+select *from employee where salary=(select Max(salary) from employee);
+ 
+14 package individual;
+import java.util.function.BiFunction;
+public class q4 {
+public static void main(String[]args) {
+	BiFunction<Integer,Integer,Boolean>
+	isMax=(x,y)->{
+		return(x>y?true:false);
+	};
+	System.out.println(isMax.apply(45,50));
+}
+}
+
+output
+false
