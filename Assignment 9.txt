@@ -1,0 +1,354 @@
+1)package assignment;
+import java.util.*;
+public class swaptwonumber {
+public static void main(String[] args) {
+	int x,y,t;
+	// x and y are to swap
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the value of X and Y");
+	x = sc.nextInt();
+	y = sc.nextInt();
+	System.out.println("before swapping numbers:"+x+" "+y);
+	/*swapping*/
+	t=x;
+	x=y;
+	y=t;
+	System.out.println("After swapping:"+x+" "+y);
+	System.out.println();
+}
+}
+
+output
+Enter the value of X and Y
+6
+3
+before swapping numbers:6 3
+After swapping:3 6
+
+
+2)package assignment;
+import java.io.*;
+public class Vowalsandconsonant {
+	// java program to check whether input
+	// character is a vowel or consonant
+	  // Function to find whether an input
+    // character is vowel or not
+	public static void main(String[] args) {
+		char ch ='i';
+		if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
+		else
+			System.out.println(ch+ "is consonant");
+	}
+}
+
+output
+i is vowel
+
+
+3)package assignment;
+
+public class fibonacci {
+	
+		  public static void main(String[] args) {
+
+		    int n = 10, firstTerm = 0, secondTerm = 1;
+		    System.out.println("Fibonacci Series till " + n + " terms:");
+
+		    for (int i = 1; i <= n; ++i) {
+		      System.out.print(firstTerm + ", ");
+
+		      // compute the next term
+		      int nextTerm = firstTerm + secondTerm;
+		      firstTerm = secondTerm;
+		      secondTerm = nextTerm;
+		    }
+		  }
+		}
+
+
+output
+Fibonacci Series till 10 terms:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 
+
+
+4)package assignment;
+
+public class factorial {
+public static void main(String args[]) {
+	int i,fact=1;
+	int number=8;
+	//It is the number to calculate factorial    
+	for (i=1;i<=number;i++) {
+		fact=fact*i;
+	}
+	System.out.println("Factorial of"+number+"is:"+fact);
+	
+}
+}
+
+output
+Factorial of8is:40320
+
+5)package assignment;
+
+
+public class Name {
+	 public void display() {
+	 System.out.println("Mayuri");
+	 }
+	} 
+	// filename: DisplayName.java 
+	// place in same folder as the Name.java file 
+	// Class containing the main() method 
+	public class DisplayName {
+	 public static void main(String[] args) {
+	 Name myname = new Name();
+	 // creating a new object of Name class
+	 myname.display();
+	 // executing the display() method in the Name class
+	 }
+	}
+
+output
+Mayuri
+
+6)package assignment;
+public class Employee {
+    private String firstName;
+    private String lastName;
+    private double monthlySalary;
+
+    public Employee(String firstName, String lastName, double monthlySalary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        if (monthlySalary >= 0) {
+            this.monthlySalary = monthlySalary;
+        }
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setMonthlySalary(double monthlySalary) {
+        if (monthlySalary >= 0) {
+            this.monthlySalary = monthlySalary;
+        }
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+}
+
+EmployeeTest.java
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Employee akshu = new Employee("Akshu", "Shigvan", 9696);
+        Employee mayu = new Employee("Mayuri", "Tambe", 8595);
+        System.out.println(akshu.getFirstName() + "'s monthly salary is " + akshu.getMonthlySalary());
+        System.out.println(mayu.getFirstName() + "'s monthly salary is " + mayu.getMonthlySalary());
+        akshu.setMonthlySalary(akshu.getMonthlySalary() * 1.1);
+        mayu.setMonthlySalary(mayu.getMonthlySalary() * 1.1);
+        System.out.println("Salary after 10% boost");
+        System.out.println(akshu.getFirstName() + "'s monthly salary is " + akshu.getMonthlySalary());
+        System.out.println(mayu.getFirstName() + "'s monthly salary is " + mayu.getMonthlySalary());
+    }
+}
+
+output
+Akshu's monthly salary is 9696.0
+Mayuri's monthly salary is 8595.0
+Salary after 10% boost
+Akshu's monthly salary is 10665.6
+Mayuri's monthly salary is 9454.5
+
+7)package assignment;
+public class Date {
+
+private int month;
+private int day;
+private int year;
+
+public Date(int m, int d, int y){
+month=m;
+day=d;
+year=y;
+
+}
+
+public void setMonth(int Months){
+if(Months>=0 && Months<=12)
+
+month=Months;
+
+else{
+month=0; }
+}
+
+public int getMonth(){
+
+return month;
+}
+
+
+public void setDay(int Days){
+if(Days>=0 && Days<=30)
+
+day=Days;
+else{
+day=0;
+}
+}
+public int getDay(){
+
+return day;
+
+}
+public void setYear(int Years){
+year=Years;
+
+}
+
+public int getYear(){
+return year;
+
+}
+
+public void displayDate(){
+
+System.out.printf("%d/%d/%d\n",getMonth(),getDay(),getYear());
+
+}
+}
+
+DateTest.java
+import java.util.Scanner;
+public class TestDate {
+
+public static void main(String args[]){
+
+Date date=new Date(0,0,0);
+
+Scanner input=new Scanner(System.in);
+
+
+System.out.println("Enter Month");
+int m=input.nextInt();
+date.setMonth(m);
+
+System.out.println("Enter Day ");
+int d=input.nextInt();
+date.setDay(d);
+
+System.out.println("Enter Year");
+int y=input.nextInt();
+date.setYear(y);
+
+date.displayDate();
+
+
+}
+
+}
+
+output
+Enter Month
+1
+Enter Day 
+11
+Enter Year
+2001
+11/1/2001
+
+
+8)package assignment;
+public class DisplayNumbers {
+	public static void main(String[] args) {
+		int a = 1;
+		int b = 2;
+		int c = 3;
+		int d = 4;
+		
+		System.out.println("display no. using println"+a+" "+b+" "+c+" "+d);
+		
+		System.out.print("display no using print: "+a+" ");
+		System.out.print(b+" ");
+		System.out.print(c+" ");
+		System.out.print(d+" ");
+		
+		System.out.println("\n");
+		
+		System.out.printf("%d %d %d %d ",a,b,c,d);
+	}
+}
+
+Output:
+display no. using println1 2 3 4
+display no using print: 1 2 3 4 
+
+1 2 3 4 
+
+9)package assignment;
+import java.util.Scanner;
+
+public class ThreeNumbers {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1st no: ");
+		int num1 = sc.nextInt();
+		
+		System.out.println("Enter 2nd no: ");
+		int num2 = sc.nextInt();
+		
+		System.out.println("Enter 3rd no: ");
+		int num3 = sc.nextInt();
+		
+		int sum = num1 + num2 + num3;
+		System.out.println("sum of numbers is: "+sum);
+		
+		int avg = sum/3;
+		System.out.println("Average of sum is: "+avg);
+		
+		int product = num1*num2*num3;
+		System.out.println("Product of numbers is: "+product);
+		
+		if(num1>num2 && num1>num3) {
+			System.out.println(num1+" is greater");
+		}
+		else if(num2>num1 && num2>num3){
+			System.out.println(num2+" is greater");
+		}
+		else {
+			System.out.println(num3+" is greater");
+		}
+	}
+}
+
+output
+Enter 1st no: 
+11
+Enter 2nd no: 
+2
+Enter 3rd no: 
+10
+sum of numbers is: 23
+Average of sum is: 7
+Product of numbers is: 220
+11 is greater
+
+
+
