@@ -1,0 +1,206 @@
+1)package Assignmet4;
+
+import java.util.Scanner;
+
+//Area of Circle = 3.14*r(Square)
+//Area of primeter = 2*3.14*r
+
+public class Area {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number: ");
+		double r = sc.nextDouble();
+		double perimeter = 2 * Math.PI * r;
+		
+		
+		System.out.println("Area of Perimeter is: "+perimeter);
+		
+		double circle = Math.PI * r*r;
+		System.out.println("Area of circle: "+ circle );
+	}
+}
+
+output
+Enter number: 
+5
+Area of Perimeter is: 31.41592653589793
+Area of circle: 78.53981633974483
+
+
+2)package Assignmet4;
+
+import java.util.Scanner;
+
+//Area of Circle = 3.14*r(Square)
+//Area of primeter = 2*3.14*r
+
+public class Area {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number: ");
+		double r = sc.nextDouble();
+		double perimeter = 2 * Math.PI * r;
+		
+		
+		System.out.println("Area of Perimeter is: "+perimeter);
+		
+		double circle = Math.PI * r*r;
+		System.out.println("Area of circle: "+ circle );
+	}
+}
+
+output
+Elemets are: [Akshu, Maddy]
+
+
+3)package Assignmet4;
+//area of rectangle = l*w
+//perimeter of rectangle = 2(l+w)
+import java.util.Scanner;
+
+public class areaofrectangle {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter length:" );
+		int l = sc.nextInt();
+		System.out.println("Enter width:");
+		int w = sc.nextInt();
+		
+		double area = w * l;
+		System.out.println("Area of rectangle is: "+area);
+		
+		double perimeter = 2 * (l+w);
+		System.out.println("perimeter of rectangle is: "+perimeter);
+	}
+}
+
+
+output
+Enter length:
+12
+Enter width:
+5
+Area of rectangle is: 60.0
+perimeter of rectangle is: 34.0
+
+
+4)package Assignmet4;
+
+import java.util.Scanner;
+
+public class sum {
+	public static void main(String[] args) {
+		int number, digit, sum = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number: ");
+		number = sc.nextInt();
+		
+		while(number>0) {
+			digit = number%10;
+			
+			sum = sum + digit;
+			
+			number = number/10;
+		}
+		System.out.println("sum of digit: "+sum);
+	}
+}
+
+output
+Enter number: 
+42
+sum of digit: 6
+
+
+5)package Assignmet4;
+
+import java.util.Scanner;
+
+public class even {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number: ");
+		
+		int num = sc.nextInt();
+		
+		if(num%2==0) {
+			System.out.println(num+" is even");
+		}else {
+			System.out.println(num+ " is not even");
+		}
+	}
+}
+
+output
+Enter the Number: 
+15
+15 is not even
+
+
+6)package Assignmet4;
+
+public class Array {
+	public static void main(String[] args) {
+		int[] arr = new int[]{1,2,3,4,5,6};
+		int sum = 0;
+	for (int i = 0; i<arr.length; i++) {
+		sum = sum + arr[i];
+		}
+	System.out.println("sum of array is: "+sum);
+	}
+}
+
+output
+sum of array is: 21
+
+
+7)package Assignmet4;
+
+import java.util.Scanner;
+
+public class leapyear {
+	public static void main(String[] args) {
+		int year;
+		System.out.println("Enter the year: ");
+		Scanner sc = new Scanner(System.in);
+		year = sc.nextInt();
+		
+		if((year%4==0)) {
+			System.out.println("Leap year");
+		}
+		else {
+			System.out.println("not Leap year");
+		}
+	}
+}
+
+output
+Enter the year: 
+2025
+not Leap year
+
+
+8)package Assignmet4;
+
+import java.util.Scanner;
+
+public class division {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter First name: ");
+		int a = sc.nextInt();
+		System.out.println("Enter 2nd no.: ");
+		int b = sc.nextInt();
+		
+		int c = a/b;
+		System.out.println("The division is: "+c);
+		sc.close();
+	}
+}
+
+output
+Enter First name: 
+13
+Enter 2nd no.: 
+5
+The division is: 2
